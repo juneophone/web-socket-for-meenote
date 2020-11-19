@@ -1,0 +1,112 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="Content-Security-Policy"  content="connect-src * 'unsafe-inline';">
+            <script src="wsclient.js"></script>
+            <style>
+                table    { border: 2px solid black; }  
+                input    { width: 300px; }
+                select   { width: 300px; }
+                textarea { width: 513px; border: 2px solid black; }
+                #btnConnect    { width: 100px; }
+                #btnDisconnect { width: 100px; }
+                #btnSend       { width: 100px; }
+                #btnClear      { width: 100px; }
+                #btnClearGhost { width: 100px; }
+                #btnMsg        { width: 100px; }  
+            </style>
+        </head>
+        <body>
+            <h1>JSON Web Client Test</h1>
+            <!-- WebSocket Connection Parameters Table -->
+            <table>
+                <tr>
+                    <td width="200px">WS Protocol</td>
+                    <td>
+                        <select id="protocol">
+                            <option value="ws" selected="selected">ws</option>
+                            <option value="wss">wss</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>WS Hostname</td>
+                    <td><input type="text" id="hostname" value="localhost"/></td>
+                </tr>
+                <tr>
+                    <td>WS Port</td>
+                    <td><input type="text" id="port" value="13812"/></td>
+                </tr>
+                <!-- <tr>
+                    <td>WS Endpoint</td>
+                    <td><input type="text" id="endpoint" value=""/></td>
+                </tr> -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <input id="btnConnect"    type="button" value="Connect"    onclick="onConnectClick()">&nbsp;&nbsp;
+                        <input id="btnDisconnect" type="button" value="Disconnect" onclick="onDisconnectClick()" disabled="disabled">
+                    </td>
+                </tr>
+            </table><br/>
+            <!-- Send Message Table -->
+            <table>
+              <tr>
+                <td width="200px">HandWriting</td>
+                    <td>
+                      <select id="handwriting">
+                        <option value="0">Disable</option>
+                        <option value="1" selected="selected">Enable</option>
+                        </select>
+                    </td>  
+              </tr>
+                <tr>
+                    <td width="200px">Waveform Mode</td>
+                    <td>
+                      <select id="mode">
+                        <option value="0">DU</option>
+                        <option value="1" selected="selected">GC</option>
+                        <option value="2">GL</option>
+                        <option value="3">GLR</option>
+                        <option value="4">GLD</option>
+                        <option value="5">A2</option>
+                        </select>
+                    </td>
+                </tr>
+              <tr>
+                <td width="200px">Gamma</td>
+                    <td>
+                      <select id="gamma">
+                        <option value="0">Dynamic Gamma</option>
+                        <option value="1">0.25</option>
+                        <option value="2">0.45</option>
+                        <option value="3">0.75</option>
+                        <option value="4" selected="selected">1.00</option>
+                        <option value="5">1.40</option>
+                        <option value="6">2.20</option>
+                        </select>
+                    </td>  
+              </tr>  
+                <tr>
+                    <td></td>
+                    <td>
+                        <input id="btnSend" type="button" value="Set MeeNote" disabled="disabled" onclick="onSendClick()">
+                        <input id="btnClearGhost" type="button" value="Clear Ghost" disabled="disabled" onclick="onClearGhostClick()">
+                        <input id="btnClear" type="button" value="Clear Massage" onclick="onClearClick()">
+                    </td> 
+                </tr>
+                <tr>
+                    <td width="200px">Message</td>
+                    <td><input type="text" id="message" value="{&quot;Mode&quot;:&quot;3&quot;,&quot;Handwriting&quot;:&quot;1&quot;,&quot;Gamma&quot;:&quot;4&quot;}"/></td>
+                </tr>
+              <tr>
+                    <td></td>
+                    <td>
+                        <input id="btnMsg" type="button" value="Send Msg" disabled="disabled" onclick="onMsgClick()">
+                    </td> 
+                </tr>
+            </table><br/>
+            <textarea id="incomingMsgOutput" rows="10" cols="20" disabled="disabled"></textarea>
+        </body>
+    </html>
