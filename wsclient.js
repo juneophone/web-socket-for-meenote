@@ -40,7 +40,7 @@
         try {
             webSocket = new WebSocket(webSocketURL);
             webSocket.onopen = function(openEvent) {
-                console.log("WebSocket OPEN: " + JSON.stringify(openEvent, null, 4));
+                //console.log("WebSocket OPEN: " + JSON.stringify(openEvent, null, 4));
                 document.getElementById("btnSend").disabled       = false;
                 document.getElementById("btnConnect").disabled    = true;
                 document.getElementById("btnDisconnect").disabled = false;
@@ -49,7 +49,7 @@
                 document.getElementById("btnMsg").disabled        = false;
             };
             webSocket.onclose = function (closeEvent) {
-                console.log("WebSocket CLOSE: " + JSON.stringify(closeEvent, null, 4));
+                //console.log("WebSocket CLOSE: " + JSON.stringify(closeEvent, null, 4));
                 document.getElementById("btnSend").disabled       = true;
                 document.getElementById("btnConnect").disabled    = false;
                 document.getElementById("btnDisconnect").disabled = true;
