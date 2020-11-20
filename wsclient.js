@@ -66,8 +66,8 @@
                 if (wsMsg.indexOf("error") > 0) {
                     document.getElementById("incomingMsgOutput").value += "error: " + wsMsg.error + "\r\n";
                 } else {
-                    //document.getElementById("incomingMsgOutput").value += "message: " + wsMsg + "\r\n";
-                  console.log("message: " + wsMsg + "\r\n");
+                  //document.getElementById("incomingMsgOutput").value += "message: " + wsMsg + "\r\n";
+                  //console.log("message: " + wsMsg + "\r\n");
                 }
               
                 // JSON String Decode
@@ -75,8 +75,7 @@
                   device = JSON.parse(wsMsg);
                   
                   switch (device.Status) {
-                    case 'sync':  
-                    case 'open':
+                    case 'sync':
                       // get/set connect event json string
                       document.getElementById("mode").options[device.Mode].selected               = true;
                       document.getElementById("handwriting").options[device.Handwriting].selected = true;
