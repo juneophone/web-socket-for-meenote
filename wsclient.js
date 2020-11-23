@@ -41,28 +41,16 @@
             webSocket = new WebSocket(webSocketURL);
             webSocket.onopen = function(openEvent) {
                 //console.log("WebSocket OPEN: " + JSON.stringify(openEvent, null, 4));
-                //document.getElementById("btnSend").disabled       = false;
                 document.getElementById("btnConnect").disabled    = true;
                 document.getElementById("btnDisconnect").disabled = false;
-                //document.getElementById("btnClear").disabled      = false;
-                document.getElementById("btnClearGhost").disabled = false;
-                document.getElementById("btnMsg").disabled        = false;              
-                document.getElementById("handwriting").disabled   = false;
-                document.getElementById("mode").disabled          = false;
-                document.getElementById("gamma").disabled         = false;                
+                uiEnable();               
                 document.getElementById("incomingMsgOutput").value += "System: MeeNote connection security. \r\n";
             };
             webSocket.onclose = function (closeEvent) {
                 //console.log("WebSocket CLOSE: " + JSON.stringify(closeEvent, null, 4));
-                //document.getElementById("btnSend").disabled       = true;
                 document.getElementById("btnConnect").disabled    = false;
                 document.getElementById("btnDisconnect").disabled = true;
-                //document.getElementById("btnClear").disabled      = true;
-                document.getElementById("btnClearGhost").disabled = true;
-                document.getElementById("btnMsg").disabled        = true;              
-                document.getElementById("handwriting").disabled   = true;
-                document.getElementById("mode").disabled          = true;
-                document.getElementById("gamma").disabled         = true;              
+                uiDisable();
                 document.getElementById("incomingMsgOutput").value += "System: MeeNote program closes. \r\n";
             };
             webSocket.onerror = function (errorEvent) {
@@ -94,15 +82,11 @@
                       break;
                     case 'usbconnect':
                       document.getElementById("incomingMsgOutput").value += "message: MeeNote USB Connection \r\n";
-                      document.getElementById("btnSend").disabled       = false;
-                      document.getElementById("btnClearGhost").disabled = false;
-                      document.getElementById("btnMsg").disabled        = false;
+                      uiEnable();
                       break;
                     case 'usbdisconnect':
                       document.getElementById("incomingMsgOutput").value += "message: MeeNote USB DisConnection \r\n";
-                      document.getElementById("btnSend").disabled       = true;
-                      document.getElementById("btnClearGhost").disabled = true;
-                      document.getElementById("btnMsg").disabled        = true;
+                      uiDisable();
                       break;
                     case 'rece':
                       if(device.Msg) {
@@ -189,5 +173,31 @@
         webSocket.send(JSON.stringify(device));        
         console.log("Set JSON String = " + JSON.stringify(device));
         
+    }
+
+    /**
+     * Enable UI control
+     */
+    function uiEnable() {
+      //document.getElementById("btnSend").disabled       = false;      
+      //document.getElementById("btnClear").disabled      = false;
+      document.getElementById("btnClearGhost").disabled = false;
+      document.getElementById("btnMsg").disabled        = false;              
+      document.getElementById("handwriting").disabled   = false;
+      document.getElementById("mode").disabled          = false;
+      document.getElementById("gamma").disabled         = false;        
+    }
+
+    /**
+     * Disable UI control
+     */
+    function uiDisable() {
+      //document.getElementById("btnSend").disabled       = true;      
+      //document.getElementById("btnClear").disabled      = true;
+      document.getElementById("btnClearGhost").disabled = true;
+      document.getElementById("btnMsg").disabled        = true;              
+      document.getElementById("handwriting").disabled   = true;
+      document.getElementById("mode").disabled          = true;
+      document.getElementById("gamma").disabled         = true;   
     }
   
