@@ -57,7 +57,7 @@
               <tr>
                 <td width="200px">HandWriting</td>
                     <td>
-                      <select id="handwriting">
+                      <select id="handwriting" onchange="onSendClick()" disabled="disabled">
                         <option value="0">Disable</option>
                         <option value="1" selected="selected">Enable</option>
                         </select>
@@ -66,7 +66,7 @@
                 <tr>
                     <td width="200px">Waveform Mode</td>
                     <td>
-                      <select id="mode">
+                      <select id="mode" onchange="onSendClick()" disabled="disabled">
                         <option value="0">DU</option>
                         <option value="1" selected="selected">GC</option>
                         <option value="2">GL</option>
@@ -79,7 +79,7 @@
               <tr>
                 <td width="200px">Gamma</td>
                     <td>
-                      <select id="gamma">
+                      <select id="gamma" onchange="onSendClick()" disabled="disabled">
                         <option value="0">Dynamic Gamma</option>
                         <option value="1">0.25</option>
                         <option value="2">0.45</option>
@@ -93,7 +93,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <input id="btnSend" type="button" value="Set MeeNote" disabled="disabled" onclick="onSendClick()">
+                        <!-- <input id="btnSend" type="button" value="Set MeeNote" disabled="disabled" onclick="onSendClick()"> -->
                         <input id="btnClearGhost" type="button" value="Clear Ghost" disabled="disabled" onclick="onClearGhostClick()">
                         <input id="btnClear" type="button" value="Clear Massage" onclick="onClearClick()">
                     </td> 
