@@ -54,7 +54,7 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
 <details>
   <summary>Gamma</summary>
   
-* 0 : Dynamic gamma function. (__Black/white__)
+* 0 : Dynamic gamma function. (__black/white ratio__)
   
 * 1 : 0.25
   
