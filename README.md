@@ -10,11 +10,11 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
   
 * sync : Synchronize server and client data.
   
-    * usbconnect :
+* usbconnect : Device USB connection status. 
   
-    * usbdisconnect :
+* usbdisconnect : Device USB disconnection status.
   
-    * rece :
+* rece :  Server received message.
   
 </details>
 
