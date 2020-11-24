@@ -17,6 +17,8 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
   
 * rece : Server received message.
   
+* setting : Client setting parameters.
+  
 </details>
 
 <details>
@@ -73,7 +75,15 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
   
 </details>
 
+## JSON Formation
 
+```json
+{"Status":"setting","Msg":1,"Mode":"3","Handwriting":"1","Gamma":"4"}
+```
+
+## Clear Ghost
+
+  * This is the ghosting phenomenon of EPD. Use GC mode to eliminate ghost images.
 
 ## License
   * Copyright (C) 2020 E Ink Holdings Inc. company and Jongwaye Ou
