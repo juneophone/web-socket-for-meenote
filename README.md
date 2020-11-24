@@ -6,9 +6,9 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
 
 <details>
   <summary>Status</summary>
-    * err :           Error Message.
+* err : Error Message.
   
-    * sync :          Synchronize server and client data.
+* sync : Synchronize server and client data.
   
     * usbconnect :
   
@@ -29,4 +29,4 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
 
 
 ## License
-  * Copyright (C) 2020 E Ink company and Jongwaye Ou
+  * Copyright (C) 2020 E Ink Holdings Inc. company and Jongwaye Ou
