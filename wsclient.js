@@ -51,7 +51,7 @@
                 document.getElementById("btnConnect").disabled    = false;
                 document.getElementById("btnDisconnect").disabled = true;
                 uiDisable();
-                document.getElementById("incomingMsgOutput").value += "System: MeeNote program closes. \r\n";
+                document.getElementById("incomingMsgOutput").value += "System: MeeNote disconnection. \r\n";
             };
             webSocket.onerror = function (errorEvent) {
                 console.log("WebSocket ERROR: " + JSON.stringify(errorEvent, null, 4));
