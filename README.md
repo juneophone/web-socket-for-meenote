@@ -85,10 +85,10 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
 
 ```json
 {
-  "Gamma": "4"
-  "Handwriting": "1"
-  "Mode": "3"
-  "Status": "sync"
+	"Status": "sync",
+	"Mode": "3",
+	"Handwriting": "1",
+	"Gamma": "4"
 }
 ```
 
