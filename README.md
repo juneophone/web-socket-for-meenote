@@ -77,10 +77,19 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
   
 </details>
 
-## JSON Formation
+## JSON Format
 
 ```json
-{"Status":"setting","Msg":1,"Mode":"3","Handwriting":"1","Gamma":"4"}
+{"Status":"sync","Mode":"3","Handwriting":"1","Gamma":"4"}
+```
+
+```json
+{
+  Gamma: "4"
+  Handwriting: "1"
+  Mode: "3"
+  Status: "sync"
+}
 ```
 
 ## Clear Ghost
