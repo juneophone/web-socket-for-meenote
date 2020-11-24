@@ -97,4 +97,4 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
   * This is the ghosting phenomenon of EPD. Use GC mode to clear ghost screen.
 
 ## License
-  * Copyright (C) 2020 E Ink Holdings Inc. company and Jongwaye Ou
+  * Copyright (C) 2020 Jongwaye Ou
