@@ -6,11 +6,16 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
 
 <details>
   <summary>Status</summary>
-    - err :           Error Message.
-    - sync :          Synchronize server and client data.
-    - usbconnect :
-    - usbdisconnect :
-    - rece :
+    * err :           Error Message.
+  
+    * sync :          Synchronize server and client data.
+  
+    * usbconnect :
+  
+    * usbdisconnect :
+  
+    * rece :
+  
 </details>
 
 
