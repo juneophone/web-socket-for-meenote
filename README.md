@@ -19,6 +19,8 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
   
 * setting : Client setting parameters.
   
+* clear : Clear ghosts.
+  
 </details>
 
 <details>
