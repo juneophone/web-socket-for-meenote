@@ -64,9 +64,9 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
   
 * 4 : 1.00 (__default__)
   
-* 5 : A2 Mode.
+* 5 : 1.40
   
-* 6 : A2 Mode.
+* 6 : 2.20
   
 </details>
 

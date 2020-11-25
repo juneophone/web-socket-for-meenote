@@ -51,7 +51,7 @@
                 document.getElementById("btnConnect").disabled    = false;
                 document.getElementById("btnDisconnect").disabled = true;
                 uiDisable();
-                document.getElementById("incomingMsgOutput").value += "System: MeeNote disconnection. \r\n";
+                document.getElementById("incomingMsgOutput").value += "System: MeeNote program closes. \r\n";
             };
             webSocket.onerror = function (errorEvent) {
                 console.log("WebSocket ERROR: " + JSON.stringify(errorEvent, null, 4));
@@ -182,7 +182,7 @@
       //document.getElementById("btnSend").disabled       = false;      
       //document.getElementById("btnClear").disabled      = false;
       document.getElementById("btnClearGhost").disabled = false;
-      //document.getElementById("btnMsg").disabled        = false;              
+      document.getElementById("btnMsg").disabled        = false;              
       document.getElementById("handwriting").disabled   = false;
       document.getElementById("mode").disabled          = false;
       document.getElementById("gamma").disabled         = false;        
@@ -195,7 +195,7 @@
       //document.getElementById("btnSend").disabled       = true;      
       //document.getElementById("btnClear").disabled      = true;
       document.getElementById("btnClearGhost").disabled = true;
-      //document.getElementById("btnMsg").disabled        = true;              
+      document.getElementById("btnMsg").disabled        = true;              
       document.getElementById("handwriting").disabled   = true;
       document.getElementById("mode").disabled          = true;
       document.getElementById("gamma").disabled         = true;   
