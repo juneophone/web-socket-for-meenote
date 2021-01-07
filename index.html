@@ -19,7 +19,7 @@
         </head>
         <body>
             <h1>MeeNote Web Client </h1>
-            <h6>MeeNote windows software requires version: 2.5 or higher.</h6>              
+            <h6>MeeNote windows software requires version: 2.6 or higher.</h6>              
           
             <!-- WebSocket Connection Parameters Table -->
             <table>
@@ -60,9 +60,32 @@
                       <select id="handwriting" onchange="onSendClick()" disabled="disabled">
                         <option value="0">Disable</option>
                         <option value="1" selected="selected">Enable</option>
+						<option value="2">Eraser Mode</option>
                         </select>
                     </td>  
               </tr>
+				<tr>
+                    <td width="200px">Pen Width</td>
+                    <td>
+						<select id="penwidth" onchange="onSendClick()" disabled="disabled">
+                        <option value="3">3</option>
+                        <option value="6">6</option>
+                        <option value="9">9</option>
+                        <option value="12">12</option>
+                        <option value="15">15</option>
+                        </select>
+                    </td>
+                </tr>
+				<tr>
+                    <td width="200px">Eraser Width</td>
+                    <td>
+						<select id="eraserwidth" onchange="onSendClick()" disabled="disabled">
+                        <option value="10">Medium</option>
+                        <option value="30">Large</option>
+                        </select>
+                    </td>
+                </tr>
+				
                 <tr>
                     <td width="200px">Waveform Mode</td>
                     <td>

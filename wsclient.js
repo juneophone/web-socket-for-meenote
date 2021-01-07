@@ -13,6 +13,9 @@
       device.Handwriting = "1";
       device.Gamma       = "4";
       device.Msg         = "0";
+	  device.PenWidth    = "5";
+	  device.EraserWidth    = "6";
+	  
 
     /**
      * Event handler for clicking on button "Connect"
@@ -76,6 +79,9 @@
                       document.getElementById("mode").options[device.Mode].selected               = true;
                       document.getElementById("handwriting").options[device.Handwriting].selected = true;
                       document.getElementById("gamma").options[device.Gamma].selected             = true;
+					  document.getElementById("penwidth").options[device.PenWidth].selected       = true;
+					  document.getElementById("eraserwidth").options[device.EraserWidth].selected = true;
+				
                       break;
                     case 'err':
                       console.log("device.Status = err !!"); 
@@ -114,6 +120,8 @@
         device.Mode          = document.getElementById("mode").value;
         device.Handwriting   = document.getElementById("handwriting").value;
         device.Gamma         = document.getElementById("gamma").value;
+		device.PenWidth      = document.getElementById("penwidth").value;
+		device.EraserWidth   = document.getElementById("eraserwidth").value;
         setToMeeNote();
         // print log
         //var deviceStr = JSON.stringify(device);
@@ -135,6 +143,8 @@
         device.Mode          = "1";
         device.Handwriting   = document.getElementById("handwriting").value;
         device.Gamma         = document.getElementById("gamma").value;
+		device.PenWidth      = document.getElementById("penwidth").value;
+		device.EraserWidth   = document.getElementById("eraserwidth").value;
         setToMeeNote();
         setTimeout(() => { onSendClick(); }, 2000);  //sleep 2 sec
     }
@@ -185,7 +195,9 @@
       //document.getElementById("btnMsg").disabled        = false;              
       document.getElementById("handwriting").disabled   = false;
       document.getElementById("mode").disabled          = false;
-      document.getElementById("gamma").disabled         = false;        
+      document.getElementById("gamma").disabled         = false;    
+	  document.getElementById("penwidth").disabled      = false;   
+	  document.getElementById("eraserwidth").disabled   = false;    	  
     }
 
     /**
@@ -199,5 +211,7 @@
       document.getElementById("handwriting").disabled   = true;
       document.getElementById("mode").disabled          = true;
       document.getElementById("gamma").disabled         = true;   
+	  document.getElementById("penwidth").disabled      = true;  
+	  document.getElementById("eraserwidth").disabled   = true;    	  
     }
   
