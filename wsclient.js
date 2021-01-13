@@ -122,7 +122,7 @@
         device.Gamma         = document.getElementById("gamma").value;
 		    device.PenWidth      = document.getElementById("penwidth").value;
 		    device.EraserWidth   = document.getElementById("eraserwidth").value;
-        device.ClearScreen   = "0";
+        //device.ClearScreen   = "0";
         setToMeeNote();
         // print log
         //var deviceStr = JSON.stringify(device);
@@ -140,12 +140,7 @@
      * Clear Ghost
      */
     function onClearGhostClick() {        
-        device.Status        = "clear"
-        device.Mode          = document.getElementById("mode").value;
-        device.Handwriting   = document.getElementById("handwriting").value;
-        device.Gamma         = document.getElementById("gamma").value;
-		    device.PenWidth      = document.getElementById("penwidth").value;
-		    device.EraserWidth   = document.getElementById("eraserwidth").value;
+        device.Status        = "clear"        
         device.ClearScreen   = "1";        
         setToMeeNote();        
         //setTimeout(() => { onSendClick(); }, 2000);  //sleep 2 sec
