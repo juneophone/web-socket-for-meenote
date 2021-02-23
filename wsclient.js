@@ -18,6 +18,16 @@
       device.ClearScreen = "0";	  
 
     /**
+     * Disable right-click menu
+     */
+    document.oncontextmenu = function(evt) {
+      evt.preventDefault();
+    };
+    document.onselectstart = function(evt) {
+      evt.preventDefault();
+    };
+
+    /**
      * Event handler for clicking on button "Connect"
      */
     function onConnectClick() {
