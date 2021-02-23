@@ -71,6 +71,30 @@ This program requires MeeNote for Windows v2.5 WebSocket Server.
 </details>
 
 <details>
+  <summary>Pen Width</summary>  
+  
+* 3 : 3 Pixel (__default__)
+
+* 6  : 6  Pixel
+
+* 9  : 9  Pixel
+
+* 12 : 12 Pixel
+
+* 15 : 15 Pixel
+  
+</details>
+
+<details>
+  <summary>Eraser Width</summary>
+  
+* 10 : Medium. (__default__)
+  
+* 20 : Large. 
+  
+</details>
+
+<details>
   <summary>Msg</summary>
   
   * __Reserve.__  
